@@ -27,9 +27,7 @@ public class Ship {
             return field;
     }
         
-        
-        public String hantei()
-    }
+ }
 
     
 
