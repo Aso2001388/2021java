@@ -3,11 +3,11 @@ import java.util.Random;
 
 public class Ship {
     
-    static int[][] field ={{0,0,0,0,0},{0,0,0,0,0},{0,0,0,0,0},{0,0,0,0,0},{0,0,0,0,0}};
+    
     public static int HP=3;
 
     //船を配置するメソッド
-    public static int[][] field(){
+    public  int[][] ran(int[][] field){
         
         int[] a ={0,1,2,3,4};
         int[] b ={0,1,2,3,4};
@@ -17,19 +17,21 @@ public class Ship {
         int X=a[ran1.nextInt(4)];
         Random ran2=new Random();
         int Y=b[ran2.nextInt(4)];
-        field[X][Y]=1;
-            
+        if(field[X][Y]==0){
+            field[X][Y]=1;
+        }else{
+            int x=a[ran1.nextInt(4)];
+            int y=b[ran2.nextInt(4)];
+            field[x][y]=1;
+        }
             return field;
-
-        }        
-        
-
-       
-
-
-
-
     }
+        
+        
+        public String hantei()
+    }
+
+    
 
     
 

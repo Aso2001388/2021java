@@ -5,16 +5,25 @@ public class Main {
         System.out.println("戦艦ゲーム");
         System.out.println("***************");
 
-
+        int[][] field ={{0,0,0,0,0},{0,0,0,0,0},{0,0,0,0,0},{0,0,0,0,0},{0,0,0,0,0}};
         int X=inX();
         int Y=inY();
+        //船を三隻配置する。
+        Ship ship1=new Ship();
+        field=ship1.ran(field);
+        
+        Ship ship2=new Ship();
+        field=ship2.ran(field);
 
-        int[][] field1=Ship.field();
+        Ship ship3=new Ship();
+        field=ship3.ran(field);
 
-        System.out.println(field1);
+        
+
+     }
+        //爆弾を落とす。
+
     
-
-    }
 
 
     //X座標の入力値をもらう
@@ -35,4 +44,8 @@ public class Main {
         return Y;
 
     }
+
+
 }
+
+   
